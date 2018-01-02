@@ -1,9 +1,9 @@
 # Angular-Truffle
 
 <p align="center">		
-  <img src="https://github.com/Nikhil22/angular2-truffle-starter-dapp/blob/master/src/assets/logo.png">		
+  <img src="https://github.com/fgirmay/BitMerate/blob/master/src/assets/logo.png">		
  </p>		
- 	
+
  ------------------------		
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
@@ -13,9 +13,7 @@ An angular4 + [truffle](https://github.com/trufflesuite/truffle) starter app. Wr
 Featured on [State of the Dapps](https://dapps.ethercasts.com/dapp/angular2-truffle-starter-dapp)
 
 ## Demo
-Create a coin with an initial supply and send an amount to your Ethereum wallet address
-
-*Note: This demo was made at the time this project used Angular2. It has since upgraded to Angular4 and works the exact same way :)*
+Register land ownership title and transfer your title to another person with a registered address.
 
 ![demo](src/assets/demo.gif)
 
@@ -24,8 +22,8 @@ There are 2 small parts to successfully running this project.
 
 ### Part 1
 
-1. `git clone https://github.com/Nikhil22/angular4-truffle-starter-dapp.git`
-2. `cd angular4-truffle-starter-dapp`
+1. `git clone https://github.com/fgirmay/BitMerate.git`
+2. `cd BitMerate`
 3. `npm install`
 
 ### Part 2
@@ -61,9 +59,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 Contributions are always welcome & encouraged! :smile: If you'd like to contribute, please see [Contributing Guidelines](CONTRIBUTE.md).
 
 ## Contributors
-1. [Nikhil Bhaskar](https://github.com/Nikhil22)
-2. [Chris Fraser](https://github.com/chrisfraser)
-3. [Rowan de Haas](https://github.com/rowandh)
+1. [Fissehaye Kahsay] (https://github.com/fgirmay)
 
 ## Further help
 
