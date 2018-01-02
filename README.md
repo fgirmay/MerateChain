@@ -12,10 +12,10 @@ An angular4 + [truffle](https://github.com/trufflesuite/truffle) starter app. Wr
 
 Featured on [State of the Dapps](https://dapps.ethercasts.com/dapp/angular2-truffle-starter-dapp)
 
-## Demo
+<!-- ## Demo
 Register land ownership title and transfer your title to another person with a registered address.
 
-![demo](src/assets/demo.gif)
+![demo](src/assets/demo.gif) -->
 
 ## How to use
 There are 2 small parts to successfully running this project.
