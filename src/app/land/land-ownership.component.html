@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('../assets/img/tigray-ethiopia.jpg');">
+        <div class="filter"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                        <div class="card card-register">
+                            <h3 class="title">Register your land</h3>
+                            <form class="register-form" (ngSubmit)="onSubmit()" #f="ngForm">
+                                <label
+                                  for="name">Name
+                                </label>
+                                <input
+                                  type="text"
+                                  id="name"
+                                  name="name"
+                                  ngModel
+                                  class="form-control"
+                                  placeholder="Your name">
+
+                                <label
+                                  for="description">Description
+                                </label>
+                                <input
+                                  type="text"
+                                  id="description"
+                                  name="description"
+                                  ngModel
+                                  class="form-control"
+                                  placeholder="Why do you want to sell your land?">
+
+                                <label
+                                  for="price">Price
+                                </label>
+                                <input
+                                  type="number"
+                                  id="price"
+                                  name="price"
+                                  ngModel
+                                  class="form-control"
+                                  placeholder="How much is the price?">
+
+                                <button class="btn btn-danger btn-block btn-round">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

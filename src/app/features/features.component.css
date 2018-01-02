@@ -1,0 +1,25 @@
+.col-container {
+  margin-left: -300px;
+  display: table; /* Make the container element behave like a table */
+  width: 100%; /* Set full-width to expand the whole page */
+}
+
+.feature-content {
+  padding-top: 1%;
+  margin-left: 25%;
+}
+
+.col {
+  display: table-cell; /* Make elements inside the container behave like table cells */
+}
+.feature-color {
+  color: teal;
+}
+
+.feature-vl {
+  border-left: 1px solid teal;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding-top: 20px;
+
+}
