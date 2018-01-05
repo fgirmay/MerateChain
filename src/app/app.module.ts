@@ -20,6 +20,9 @@ import { MetacoinComponent } from './metacoin/metacoin.component';
 import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
 import { SigninComponent } from './signin/signin.component';
+import { LandListComponent } from './land-list/land-list.component';
+import { LandItemComponent } from './land-list/land-item/land-item.component';
+import { LandDetailComponent } from './land-detail/land-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { SigninComponent } from './signin/signin.component';
     MetacoinComponent,
     AboutComponent,
     FeaturesComponent,
-    SigninComponent
+    SigninComponent,
+    LandListComponent,
+    LandItemComponent,
+    LandDetailComponent
   ],
   imports: [
     BrowserModule,

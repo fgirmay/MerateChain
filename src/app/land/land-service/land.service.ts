@@ -5,11 +5,14 @@ const Web3 = require('web3');
 const contract = require('truffle-contract');
 const metaincoinArtifacts = require('../../../../build/contracts/MetaCoin.json');
 import { canBeNumber } from '../../../util/validation';
+import { Land } from '../land.model';
 
 declare var window: any;
 
 @Injectable()
 export class LandService {
+  landTitleChanged = new Subject<Land[]>();
+  landList: Land[] ;
   MetaCoin = contract(metaincoinArtifacts);
   balanceChanged = new Subject<number>();
 
@@ -128,6 +131,11 @@ export class LandService {
     });
 
     console.log('The value of the balance is ' + this.balance);
+  }
+
+  getLandTitles() {
+    this.landList =  [];
+    return this.landList;
   }
 
 }

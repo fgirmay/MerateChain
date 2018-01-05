@@ -1,0 +1,22 @@
+<div class="land-list">
+  <div class="row">
+    <div class="col-xs-12">
+      <a [routerLink]="['/land-ownership']" class="btn btn-success btn-block">Register Land</a>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-land-item
+        *ngFor="let land of landList; let i = index"
+        [land]="land"
+        [index]="i">
+      </app-land-item>
+    </div>
+    <div class="col-xs-12">
+      <div class="land-detail">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

@@ -101,7 +101,6 @@ export class LandOwnershipComponent implements OnInit {
         alert('There was an error fetching your accounts.');
         return;
       }
-
       if (accs.length === 0) {
         alert(
           'Couldn\'t get any accounts! Make sure your Ethereum client is configured correctly.'

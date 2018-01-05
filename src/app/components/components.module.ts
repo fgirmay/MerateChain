@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
@@ -13,6 +14,8 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { LandListComponent } from '../land-list/land-list.component';
+import { LandItemComponent } from '../land-list/land-item/land-item.component';
 
 @NgModule({
     imports: [
@@ -20,7 +23,8 @@ import { NgbdModalContent } from './modal/modal.component';
         FormsModule,
         NgbModule,
         NouisliderModule,
-        JWBootstrapSwitchModule
+        JWBootstrapSwitchModule,
+        RouterModule
     ],
     declarations: [
         ComponentsComponent,

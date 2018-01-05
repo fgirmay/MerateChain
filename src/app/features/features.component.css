@@ -1,7 +1,7 @@
 .col-container {
   margin-left: -300px;
-  display: table; /* Make the container element behave like a table */
-  width: 100%; /* Set full-width to expand the whole page */
+  display: table;
+  width: 100%;
 }
 
 .feature-content {
@@ -13,11 +13,11 @@
   display: table-cell; /* Make elements inside the container behave like table cells */
 }
 .feature-color {
-  color: teal;
+  color: black;
 }
 
 .feature-vl {
-  border-left: 1px solid teal;
+  border-left: 1px solid black;
   margin-right: 2%;
   margin-left: 2%;
   padding-top: 20px;

@@ -1,4 +1,9 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="col-xs-12" routerLinkActive="active">
+    <a [routerLink]="['/home']">
+      <h3 class="logo-color"><strong>BITMERATE</strong></h3>
+    </a>
+  </div>
   <div class="container">
     <div class="navbar-translate">
       <button
@@ -18,14 +23,14 @@
     <div class="collapse navbar-collapse" id="navbarToggler">
       <div class="navbar-nav ml-auto">
         <div class="col-xs-12" routerLinkActive="active">
-          <a [routerLink]="['/home']" class="btn btn-outline-success btn-round">Home</a>
-          <a [routerLink]="['/about']" class="btn btn-outline-success btn-round">About</a>
-          <a [routerLink]="['/features']" class="btn btn-outline-success btn-round">Features</a>
-          <a [routerLink]="['/signin']" class="btn btn-outline-success btn-round">Login</a>
+          <a [routerLink]="['/about']" class="btn btn-neutral btn-round">About</a>
+          <a [routerLink]="['/features']" class="btn btn-neutral btn-round">Features</a>
+          <a [routerLink]="['/signin']" class="btn btn-neutral btn-round">Login</a>
+          <a [routerLink]="['/land-list']" class="btn btn-danger btn-round">Try the demo</a>
         </div>
       </div>
 
-      <div class="col-xs-12">
+      <!-- <div class="col-xs-12">
         <div class="container">
           <div class="collapse navbar-collapse justify-content-end" id="navbar-menu-icon">
             <ul class="navbar-nav">
@@ -40,14 +45,14 @@
                     <a [routerLink]="['/home']" class="dropdown-item">Login
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a [routerLink]="['/land-ownership']" class="dropdown-item">Try the demo</a>
+                    <a [routerLink]="['/land-list']" class="dropdown-item">Try the demo</a>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </nav>

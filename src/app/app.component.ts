@@ -79,7 +79,7 @@ export class AppComponent {
 
         }
 
-        this.refreshBalance();
+        //this.refreshBalance();
 
     }
 
@@ -135,61 +135,61 @@ export class AppComponent {
       this.accounts = accs;
       this.account = this.accounts[0];
 
-      console.log('The account is ' + this.account);
+      //console.log('The account is ' + this.account);
 
       // This is run from window:load and ZoneJS is not aware of it we
       // need to use _ngZone.run() so that the UI updates on promise resolution
-      this._ngZone.run(() =>
-        this.refreshBalance()
-      );
+      // this._ngZone.run(() =>
+      //   this.refreshBalance()
+      // );
     });
   }
 
-  refreshBalance() {
-    let meta;
-    this.MetaCoin
-      .deployed()
-      .then(instance => {
-        meta = instance;
-        return meta.getBalance.call(this.account, {
-          from: this.account
-        });
-      })
-      .then(value => {
-        this.balance = value;
-      })
-      .catch(e => {
-        console.log(e);
-        //this.setStatus('Error getting balance; see log.');
-      });
-  }
+  // refreshBalance() {
+  //   let meta;
+  //   this.MetaCoin
+  //     .deployed()
+  //     .then(instance => {
+  //       meta = instance;
+  //       return meta.getBalance.call(this.account, {
+  //         from: this.account
+  //       });
+  //     })
+  //     .then(value => {
+  //       this.balance = value;
+  //     })
+  //     .catch(e => {
+  //       console.log(e);
+  //       //this.setStatus('Error getting balance; see log.');
+  //     });
+  // }
 
   setStatus(message: string) {
     this.status = message;
   }
 
-  sendCoin() {
-    const amount = this.sendingAmount;
-    const receiver = this.recipientAddress;
-    let meta;
-
-    this.setStatus('Initiating transaction... (please wait)');
-
-    this.MetaCoin
-      .deployed()
-      .then(instance => {
-        meta = instance;
-        return meta.sendCoin(receiver, amount, {
-          from: this.account
-        });
-      })
-      .then(() => {
-        this.setStatus('Transaction complete!');
-        this.refreshBalance();
-      })
-      .catch(e => {
-        console.log(e);
-        this.setStatus('Error sending coin; see log.');
-      });
-  }
+  // sendCoin() {
+  //   const amount = this.sendingAmount;
+  //   const receiver = this.recipientAddress;
+  //   let meta;
+  //
+  //   this.setStatus('Initiating transaction... (please wait)');
+  //
+  //   this.MetaCoin
+  //     .deployed()
+  //     .then(instance => {
+  //       meta = instance;
+  //       return meta.sendCoin(receiver, amount, {
+  //         from: this.account
+  //       });
+  //     })
+  //     .then(() => {
+  //       this.setStatus('Transaction complete!');
+  //       //this.refreshBalance();
+  //     })
+  //     .catch(e => {
+  //       console.log(e);
+  //       this.setStatus('Error sending coin; see log.');
+  //     });
+  // }
 }
