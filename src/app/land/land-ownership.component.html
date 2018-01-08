@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
                         <div class="card card-register">
-                            <h3 class="title">Register your land</h3>
+                            <h3 class="title">Register land title</h3>
                             <form class="register-form" (ngSubmit)="onSubmit()" #f="ngForm">
                                 <label
                                   for="name">Name
@@ -16,29 +16,51 @@
                                   name="name"
                                   ngModel
                                   class="form-control"
-                                  placeholder="Your name">
+                                  placeholder="Owner name">
 
-                                <label
-                                  for="description">Description
-                                </label>
-                                <input
-                                  type="text"
-                                  id="description"
-                                  name="description"
-                                  ngModel
-                                  class="form-control"
-                                  placeholder="Description of the land such as city">
+                                  <label
+                                    for="city">City
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    ngModel
+                                    class="form-control"
+                                    placeholder="In which city is the land located?">
 
-                                <label
-                                  for="price">Price
-                                </label>
-                                <input
-                                  type="number"
-                                  id="price"
-                                  name="price"
-                                  ngModel
-                                  class="form-control"
-                                  placeholder="Estimated price?">
+                                  <label
+                                    for="rights">Rights
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="rights"
+                                    name="rights"
+                                    ngModel
+                                    class="form-control"
+                                    placeholder="Owner rights">
+
+                                    <label
+                                      for="restrictions">Restrictions
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="restrictions"
+                                      name="restrictions"
+                                      ngModel
+                                      class="form-control"
+                                      placeholder="Owner restrictions">
+
+                                      <label
+                                        for="responsibilities">Responsibilities
+                                      </label>
+                                      <input
+                                        type="text"
+                                        id="responsibilities"
+                                        name="responsibilities"
+                                        ngModel
+                                        class="form-control"
+                                        placeholder="Owner responsibilities">
 
                                 <button class="btn btn-danger btn-block btn-round">Register</button>
                             </form>

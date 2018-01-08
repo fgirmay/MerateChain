@@ -1,12 +1,27 @@
-<div class="container">
+<div class="paddingDiv">
   <div class="row">
     <div class="col-xs-12">
-      <h3>{{ land.ownerName }}</h3>
+      <h3><strong>Owner name:</strong> {{ land.name }}</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 text-center">
-      <h4> {{ land.cityName }}</h4>
+      <h4><strong>Address:</strong>  {{ land.city }}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h4><strong>Right:</strong>  {{ land.rights }}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h4><strong>Restrictions:</strong>  {{ land.restrictions }}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h4><strong>Responsibilities:</strong>  {{ land.responsibilities }}</h4>
     </div>
   </div>
 </div>

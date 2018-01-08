@@ -1,10 +1,17 @@
 export class Land {
 
-  public ownerName: string;
-  public cityName: string;
+  public name: string;
+  public city: string;
 
-  constructor(name: string, city: string) {
-    this.ownerName = name;
-    this.cityName = city;
+  public rights: string;
+  public restrictions: string;
+  public responsibilities: string;
+
+  constructor(name: string, city: string, rights: string, restrictions: string, responsibilities: string) {
+    this.name = name;
+    this.city = city;
+    this.rights = rights;
+    this.restrictions = restrictions;
+    this.responsibilities = responsibilities;
   }
 }

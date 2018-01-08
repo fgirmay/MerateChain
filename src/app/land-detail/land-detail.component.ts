@@ -49,14 +49,12 @@ export class LandDetailComponent implements OnInit {
       .deployed()
       .then(instance => {
         landInstance = instance;
-        return landInstance.landList(this.id + 1);
+        return landInstance.landList(this.id);
       }).then(land => {
         if (land === null) {
           return;
         }
-        console.log('Value of land[2] is ' + land[2]);
-        console.log('Value of land[3] is ' + land[3]);
-        this.land = new Land(land[2], land[3]);
+        this.land = new Land(land[2], land[3], land[4], land[5], land[6]);
       })
       .catch(e => {
         console.log('Error getting land info: ' + e);

@@ -7,8 +7,10 @@ contract LandTitle {
       uint id;
       address owner;
       string name;
-      string description;
-      uint256 price;
+      string city;
+      string rights;
+      string restrictions;
+      string responsibilities;
     }
 
     // State variables
@@ -20,18 +22,18 @@ contract LandTitle {
       uint indexed _id,
       address indexed _landOwner,
       string _ownerName,
-      uint256 _price
+      string _city
     );
 
     // register land
-    function registerLand(string _name, string _description, uint256 _price) public {
-        landListCounter++;
+    function registerLand(string _name, string _city, string _rights, string _restrictions, string _responsibilities) public {
 
         // store the Land title
-        landList[landListCounter] = Land(landListCounter, msg.sender, _name, _description, _price);
+        landList[landListCounter] = Land(landListCounter, msg.sender, _name, _city, _rights, _restrictions, _responsibilities);
+        landListCounter++;
 
         // trigger the event
-        registerLandEvent(landListCounter, msg.sender, _name, _price);
+        registerLandEvent(landListCounter, msg.sender, _name, _city);
     }
 
     //fetch the number of Land registered in the contract

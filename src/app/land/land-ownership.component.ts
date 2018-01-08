@@ -29,8 +29,11 @@ export class LandOwnershipComponent implements OnInit {
 
   test : Date = new Date();
   name: string;
-  description: string;
-  price: number;
+  city: string;
+
+  rights: string;
+  restrictions: string;
+  responsibilities: string;
 
   constructor(private _ngZone: NgZone, private router: Router) { }
 
@@ -41,8 +44,11 @@ export class LandOwnershipComponent implements OnInit {
 
   onSubmit() {
     this.name = this.registerLandForm.value.name;
-    this.description = this.registerLandForm.value.description;
-    this.price = this.registerLandForm.value.price;
+    this.city = this.registerLandForm.value.city;
+
+    this.rights = this.registerLandForm.value.rights;
+    this.restrictions = this.registerLandForm.value.restrictions;
+    this.responsibilities = this.registerLandForm.value.responsibilities;
 
     this.registerLandTitle();
     this.registerLandForm.reset();
@@ -51,15 +57,17 @@ export class LandOwnershipComponent implements OnInit {
 
   registerLandTitle() {
     const name = this.name;
-    const description = this.description;
-    const price = this.price;
+    const city = this.city
+    const rights = this.rights;
+    const restrictions = this.restrictions;
+    const responsibilities = this.responsibilities;
     let land;
 
     this.LandTitle
       .deployed()
       .then(instance => {
         land = instance;
-        return land.registerLand(name, description, price , {
+        return land.registerLand(name, city, rights, restrictions, responsibilities, {
           from: this.account
         });
       })

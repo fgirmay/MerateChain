@@ -32,20 +32,9 @@ export class LandListComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.subscription = this.landService.landTitleChanged
-    //   .subscribe(
-    //     (landList: Land[]) => {
-    //       this.landList = landList;
-    //     }
-    //   );
-    // this.landList = this.landService.getLandTitles();
     this.checkAndInstantiateWeb3();
     this.onReady();
-    //this.reloadLandLists();
     this.getNumberOfLandRegistered();
-    //this.reloadAllRegisteredLand(this.numberOfRegistered);
-    //this.reloadLandElement(1);
-    //this.reloadLandElement(2);
   }
 
   onRegisterLand(){
@@ -109,8 +98,7 @@ export class LandListComponent implements OnInit {
         if (land === null) {
           return;
         }
-        this.landList.push(new Land(land[2], land[3]));
-        // this.loading = false;
+        this.landList.push(new Land(land[2], land[3], land[4], land[5], land[6]));
       })
       .catch(e => {
         console.log('Error getting land info: ' + e);
@@ -119,7 +107,7 @@ export class LandListComponent implements OnInit {
   }
 
   reloadAllRegisteredLand(counter: number) {
-    for (var i = 1; i < counter + 1; i++) {
+    for (var i = 0; i < counter; i++) {
       this.reloadLandElement(i);
     }
   }
