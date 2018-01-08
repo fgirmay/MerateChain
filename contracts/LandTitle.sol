@@ -15,12 +15,23 @@ contract LandTitle {
     mapping(uint => Land) public landList;
     uint landListCounter;
 
+    // Events
+    event registerLandEvent (
+      uint indexed _id,
+      address indexed _landOwner,
+      string _ownerName,
+      uint256 _price
+    );
+
     // register land
     function registerLand(string _name, string _description, uint256 _price) public {
         landListCounter++;
 
-        // store the Land
+        // store the Land title
         landList[landListCounter] = Land(landListCounter, msg.sender, _name, _description, _price);
+
+        // trigger the event
+        registerLandEvent(landListCounter, msg.sender, _name, _price);
     }
 
     //fetch the number of Land registered in the contract

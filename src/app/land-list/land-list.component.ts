@@ -119,10 +119,8 @@ export class LandListComponent implements OnInit {
   }
 
   reloadAllRegisteredLand(counter: number) {
-    console.log('Value of counter is ' + counter);
     for (var i = 1; i < counter + 1; i++) {
       this.reloadLandElement(i);
-      console.log('What about this?')
     }
   }
 

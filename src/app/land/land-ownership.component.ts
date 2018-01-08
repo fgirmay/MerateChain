@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 const Web3 = require('web3');
 const contract = require('truffle-contract');
@@ -31,7 +32,7 @@ export class LandOwnershipComponent implements OnInit {
   description: string;
   price: number;
 
-  constructor(private _ngZone: NgZone) { }
+  constructor(private _ngZone: NgZone, private router: Router) { }
 
   ngOnInit() {
     this.checkAndInstantiateWeb3();
@@ -45,6 +46,7 @@ export class LandOwnershipComponent implements OnInit {
 
     this.registerLandTitle();
     this.registerLandForm.reset();
+    this.router.navigate(['/land-list']);
   }
 
   registerLandTitle() {
